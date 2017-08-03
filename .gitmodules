@@ -1,0 +1,6 @@
+[submodule "FC_Framework"]
+	path = FC_Framework
+	url = https://github.com/fmorris2/FC_Framework
+[submodule "FC_Mining"]
+	path = FC_Mining
+	url = https://github.com/fmorris2/FC_Mining

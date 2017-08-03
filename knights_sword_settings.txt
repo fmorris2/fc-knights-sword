@@ -1,0 +1,55 @@
+Knights Sword Quest Settings:
+Requirements:
+	Skills:
+		-10 Mining
+	Items:
+		-Trout if low level (for food) (333)
+		-Redberry pie
+		-Useable pickaxe of any time
+		-2 Iron bars
+		-1 Blurite ore
+		
+QUEST FLOW:
+	Talk to Squire(0,1,0,0) (Center Tile: (2978, 3342, 0), Radius: 10)
+		-Setting 122 changes from 0 --> 1
+	Talk to Reldo (3) (Center Tile: (3210, 3494, 0), Radius: 6)
+		-Setting 122 changes from 1 --> 2
+	Talk to Thurgo (1,1) (Center Tile: (3000, 3145, 0), Radius: 10)
+		Requirements:
+			-Redberry Pie
+		-Setting 122 changes from 2 --> 3
+		-Varbit 580 for setting 482 changes from 0 --> 1
+		-Redberry Pie disappears from inventory
+	Talk to Thurgo (1)
+		-Setting 122 changes from 3 --> 4
+	Talk to Squire ()
+		-Setting 122 changes from 4 --> 5
+	Search Cupboard (Center Tile: (2983, 3334, 2), Radius: 5)
+		-Sir Vyvin cannot be looking at you, or in the room
+		-Portrait appears in inventory (666)
+	Talk to Thurgo (1)
+		Requirements:
+			-Portrait
+		FutureTaskPreparer
+			-Iron bar x 2
+			-Trout (if combat level is low)
+			-Pickaxe
+		-Setting 122 changes from 5 --> 6
+		-Portrait disappears from inventory
+	Mine blurite(668) (Tile: 3049, 9567, 0)
+		Requirements:
+			-Pickaxe
+			-Trout (if combat level is low)
+		FutureTaskPreparer
+			-Iron bars
+	Talk to Thurgo (1)
+		Requirements:
+			-Blurite ore
+			-Iron bar x 2
+		Requirements disappear from inventory
+		Blurite sword (667) appears in inventory
+	Talk to Squire
+		-Setting 122 changes from 6 --> 7
+		-Blurite sword disappears from inventory
+		
+		
