@@ -23,8 +23,8 @@ public class KSMiningReq extends SkillRequirement
 	
 	private static Mission getMission(FCMissionScript script)
 	{
-		WorldHopSettings hopSettings = new WorldHopSettings(10, 20, false);
-		hopSettings.resourceStolen = 20;
+		WorldHopSettings hopSettings = new WorldHopSettings(25, 20, false);
+		hopSettings.resourceStolen = 30;
 		
 		return new FCMining(script, true, true, hopSettings, null, GatheringMode.BANK, null, ProgressionType.EXPERIENCE, new SkillGoal(SKILL, REQ));
 	}

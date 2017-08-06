@@ -18,6 +18,7 @@ import scripts.fc.api.generic.FCConditions;
 import scripts.fc.api.interaction.impl.objects.ClickObject;
 import scripts.fc.api.items.FCItem;
 import scripts.fc.api.skills.mining.MiningUtils;
+import scripts.fc.api.skills.mining.data.Pickaxe;
 import scripts.fc.api.travel.Travel;
 import scripts.fc.api.worldhopping.FCInGameHopper;
 import scripts.fc.api.wrappers.FCTiming;
@@ -49,10 +50,14 @@ public class MineBlurite extends Task implements SpaceRequiredTask, ItemsRequire
 	public FCItem[] getRequiredItems()
 	{
 		List<FCItem> items = new ArrayList<>();
-		items.add(new FCItem(1, false, MiningUtils.getBestUsablePick(true).getItemId()));
+		Pickaxe bestUsable = MiningUtils.getBestUsablePick(true);
+		items.add(new FCItem(1, false, bestUsable != null ? bestUsable.getItemId() : Pickaxe.IRON.getItemId()));
 		if(Inventory.getCount(KSItemReqs.TROUT) <= 0)
 		{
-			int troutInBank = BankBool.bankObserver.getCount(KSItemReqs.TROUT);		
+			int troutInBank = BankBool.bankObserver.getCount(KSItemReqs.TROUT);
+			if(troutInBank == 0)
+				troutInBank = 1;
+			
 			items.add(new FCItem(troutInBank > 6 ? 6 : troutInBank, false, KSItemReqs.TROUT));
 		}
 		return items.toArray(new FCItem[items.size()]);
