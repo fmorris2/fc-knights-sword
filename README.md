@@ -7,5 +7,6 @@ Script written for the [TRiBot](https://tribot.org/forums/) community to complet
 ## Features
 - Start anywhere in the game world
 - Grand Exchange support (ensure your account has enough gold to buy the required materials)
+- Utilizes [FC Mining](https://github.com/fmorris2/fc-mining) to achieve the level 10 mining requirement if necessary
 - [ABC2L10](https://tribot.org/forums/topic/60719-tribot-release-9300_0-abc2/) (Anti-Ban Compliance 2 Level 10)
 - Efficient and fast quest completion
