@@ -1,4 +1,3 @@
-package scripts.fc.missions.fc_knights_sword;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -76,6 +75,11 @@ public class FCKnightsSword extends QuestScriptManager
 	public String toString()
 	{
 		return QUEST_NAME;
+	}
+
+	@Override
+	public int getQuestPointReward() {
+		return 1;
 	}
 
 }
