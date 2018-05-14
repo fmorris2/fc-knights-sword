@@ -1,3 +1,4 @@
+package scripts.fc.missions.fc_knights_sword;
 
 import java.util.Arrays;
 import java.util.LinkedList;
